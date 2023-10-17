@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Seat Booking</title>
+  <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+  <h1>Bus Seat Booking</h1>
+  <div class="container">
+    <h2>Select your seats:</h2>
+    <div class="seats">
+      <div class="seat-row">
+        <div class="seat"></div>
+        <!-- Add more seat divs for each seat in the bus -->
+      </div>
+      <!-- Add more seat-row divs for each row in the bus -->
+    </div>
+    <button onclick="makePayment()">Make Payment</button>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <h2>Payment Details</h2>
+      <p id="payment-details"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

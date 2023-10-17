@@ -1,0 +1,65 @@
+class Bus:
+    def __init__(self):
+        self.seats = [0] * 55  # Initialize all seats as available (0 represents available)
+
+    def check_availability(self):
+        return sum(self.seats)
+
+    def book_seat(self, num_seats):
+        available_seats = self.check_availability()
+
+        if num_seats <= available_seats:
+            booked_seats = []
+            for i in range(len(self.seats)):
+                if self.seats[i] == 0:
+                    self.seats[i] = 1  # Mark the seat as booked
+                    booked_seats.append(i+1)  # Seat numbers start from 1
+
+                    if len(booked_seats) == num_seats:
+                        break
+
+            return booked_seats
+        else:
+            return []
+
+class PaymentGateway:
+    def process_payment(self, amount):
+        # Code to process the payment using a payment gateway
+        # You can replace this with actual payment processing logic
+        return True
+
+    def generate_payment_details(self, amount):
+        # Generate payment details for the user
+        return f"Payment of {amount} INR received. Seat(s) booked successfully."
+
+bus = Bus()
+payment_gateway = PaymentGateway()
+
+while True:
+    print(f"Available seats: {bus.check_availability()}")
+
+    try:
+        num_seats = int(input("Enter the number of seats you want to book (0 to exit): "))
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+        continue
+
+    if num_seats == 0:
+        break
+
+    booked_seats = bus.book_seat(num_seats)
+
+    if booked_seats:
+        total_amount = num_seats * 100  # Cost of each seat is 100 INR
+        payment_success = payment_gateway.process_payment(total_amount)
+
+        if payment_success:
+            payment_details = payment_gateway.generate_payment_details(total_amount)
+            print(payment_details)
+            print("Your booked seat(s):", booked_seats)
+        else:
+            print("Payment failed. Please try again.")
+    else:
+        print("Sorry, the requested number of seats is not available.")
+
+print("Thank you for using our bus booking system!")

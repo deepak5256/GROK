@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GROK (Geo Resources of Karnataka)</title>
+    <style>
+        /* CSS styles for the webpage */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        #container {
+            width: 800px;
+            margin: 0 auto;
+        }
+        #image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #info {
+            margin-bottom: 30px;
+        }
+        #map {
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        #footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        .animation {
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="GROK Logo">
+        <h1>GROK (Geo Resources of Karnataka)</h1>
+    </header>
+    <div id="container">
+        <div id="image" class="animation">
+            <img src="place_image.jpg" alt="Place Image" width="500">
+        </div>
+        <div id="info" class="animation">
+            <h2>General Information</h2>
+            <p>This is the general information about the place...</p>
+        </div>
+        <div id="map" class="animation">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.5678!2dLongitude!3dLatitude!4m15!2m14!1m13!1splace%20name!4m8!1m3!1d1234.5678!2dLongitude!3dLatitude!3m2!1i1024!2i768!4f13.1!4m2!3dLatitude!4dLongitude" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div id="info" class="animation">
+            <h2>Geological Information</h2>
+            <p>This is the geological information about the place...</p>
+        </div>
+    </div>
+    <footer id="footer">
+        &copy; 2023 GROK (Geo Resources of Karnataka)
+    </footer>
+</body>
+</html>

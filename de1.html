@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>GROK - Geo Resources of Karnataka</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    img.logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    
+    .option-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .option-btn:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="logo.jpg" alt="GROK Logo">
+    <h1>Welcome to Geo Resources of Karnataka (GROK)</h1>
+    <p>Please provide your email or phone number to receive the OTP.</p>
+    <form>
+      <input type="text" placeholder="Email or Phone Number" required>
+      <button type="submit">Send OTP</button>
+    </form>
+    <div>
+      <h2>Explore GROK</h2>
+      <button class="option-btn" onclick="window.open('pdf.html')">1. Download PDF Files</button>
+      <button class="option-btn" onclick="window.open('tourist_places.html')">2. Famous Tourist Places and Geological Information</button>
+      <button class="option-btn" onclick="window.open('shop.html')">3. Shop</button>
+    </div>
+  </div>
+</body>
+</html>
